@@ -11,10 +11,10 @@ environment_name="Domino Standard Environment Py3.10 R4.4"
 cache=False
 
 @workflow
-def retrieve_data(data_path_a: str, data_path_b: str): 
+def retrieve_data(data_path_a: str): 
     '''
 
-    pyflyte run --remote data_csv.py model_training --data_path_a /mnt/datasetA.csv
+    pyflyte run --remote data_csv.py retrieve_data --data_path_a /mnt/datasetA.csv
     '''
 
     task1 = run_domino_job_task(
